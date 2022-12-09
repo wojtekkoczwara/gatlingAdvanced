@@ -14,7 +14,7 @@ import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class AceToysSimulation extends Simulation {
 
-    public static final String TEST_TYPE = System.getProperty("TEST_TYPE", "INSTANT_USERS");
+    public static final String TEST_TYPE = System.getenv("TEST_TYPE");
     private static final String DOMAIN = "acetoys.uk";
 
     private HttpProtocolBuilder httpProtocol = http

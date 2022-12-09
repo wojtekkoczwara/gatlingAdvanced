@@ -10,7 +10,7 @@ import static io.gatling.javaapi.core.CoreDsl.*;
 public class TestScenario {
 
     public static final Duration TEST_DURATION = Duration.ofSeconds(Integer
-            .parseInt(System.getProperty("DURATION", "60")));
+            .parseInt(System.getenv("DURATION")));
 
     public static ScenarioBuilder defaultLoadTest =
             scenario("Default Load Test")
