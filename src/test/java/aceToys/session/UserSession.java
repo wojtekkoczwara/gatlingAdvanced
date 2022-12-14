@@ -3,6 +3,8 @@ package aceToys.session;
 import io.gatling.javaapi.core.ChainBuilder;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
