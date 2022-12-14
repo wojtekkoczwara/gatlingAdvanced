@@ -12,7 +12,8 @@ public class TestPopulation {
 
     private static final int USER_COUNT = Integer.parseInt(System.getenv("USERS"));
     private static final Duration RAMP_DURATION =
-            Duration.ofSeconds(Integer.parseInt(System.getenv("DURATION")));
+        Duration.ofSeconds(15);
+//             Duration.ofSeconds(Integer.parseInt(System.getenv("DURATION")));
     public static PopulationBuilder instantUsers =
             TestScenario.defaultLoadTest
                     .injectOpen(
