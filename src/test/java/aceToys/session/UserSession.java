@@ -9,7 +9,13 @@ import static io.gatling.javaapi.http.HttpDsl.*;
 
 public class UserSession {
 
-    public static final DecimalFormat df = new DecimalFormat("0.00");
+    public static final NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
+
+    {
+        nf.setMinimumFractionDigits(2);
+        nf.setMaximumFractionDigits(2);
+    }
+    public static final DecimalFormat df = (DecimalFormat) nf;
 
     public static ChainBuilder initSession = exec(flushCookieJar())
             .exec(session -> session.set("productsListPageNumber", 1))
